@@ -37,6 +37,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBAction func save() {
         guard let text = memoField.text else { return }
         create(text)
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     func create(text: String) {

@@ -65,7 +65,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }catch let error as NSError {
             print("\(error.localizedDescription)")
         }
-        table.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,15 +76,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let index = data[indexPath.row]
         
-        cell.descriptionLabel.text = index.valueForKey("memo") as! String
-//        cell.dateLabel.text = index.valueForKey("date") as! String
+        cell.descriptionLabel.text = "\(index.valueForKey("memo"))"
         cell.dateLabel.text = convertDateToString(index.valueForKey("date") as! NSDate)
         
         return cell
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            delete(numberOfRows: indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.delete(numberOfRows: indexPath.row)
+        
     }
     
     func  convertDateToString(date: NSDate) -> String {
