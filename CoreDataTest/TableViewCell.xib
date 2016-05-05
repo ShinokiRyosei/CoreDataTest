@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="38" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="CoreDataTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="37.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mE-QP-1PB">
+                        <rect key="frame" x="8" y="8" width="246" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juj-2d-N2A">
+                        <rect key="frame" x="270" y="8" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="fdk-hS-Wyb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="juj-2d-N2A" secondAttribute="trailing" id="1nF-lX-aAP"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="8mE-QP-1PB" secondAttribute="leading" id="JDZ-mQ-WED"/>
+                    <constraint firstItem="juj-2d-N2A" firstAttribute="leading" secondItem="8mE-QP-1PB" secondAttribute="trailing" constant="16" id="PMf-7b-Owl"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="8mE-QP-1PB" secondAttribute="bottom" constant="0.5" id="XQS-UG-00H"/>
+                    <constraint firstAttribute="topMargin" secondItem="juj-2d-N2A" secondAttribute="top" id="YJC-Fv-6MY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="juj-2d-N2A" secondAttribute="bottom" constant="0.5" id="cA6-vJ-Ze6"/>
+                    <constraint firstAttribute="topMargin" secondItem="8mE-QP-1PB" secondAttribute="top" id="gKQ-Zt-tBb"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="YJC-Fv-6MY"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="juj-2d-N2A" id="77J-38-KYx"/>
+                <outlet property="descriptionLabel" destination="8mE-QP-1PB" id="B8H-1O-Zy4"/>
+            </connections>
+            <point key="canvasLocation" x="245" y="332"/>
+        </tableViewCell>
+    </objects>
+</document>
